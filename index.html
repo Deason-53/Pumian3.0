@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="朴眠 PUMIAN 官方网站">
+    <title>朴眠 PUMIAN</title>
+
+    <!-- 引入 Tailwind CSS 进行页面样式构建 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 引入 Google Fonts 提升品牌高级感 (Noto Serif 适合中文衬线体，Inter适合无衬线体) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Noto+Serif+SC:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- ========================================================================================= -->
+    <!--                                  全局配置区 (GLOBAL CONFIGURATION)                        -->
+    <!--                                                                                           -->
+    <!--    请在此处修改网站的所有文字、图片、产品和联系方式。                                     -->
+    <!--    修改这里的对应内容后，整个网站（包括顶部、底部、轮播图）都会自动更新，无需往下翻阅代码！   -->
+    <!-- ========================================================================================= -->
+    <script>
+        window.PUMIAN_CONFIG = {
+            // ----------------- 中文配置 (CHINESE) -----------------
+            zh: {
+                pageTitle: "朴眠 PUMIAN | 回归自然，专注好眠",
+                metaDescription: "朴眠PUMIAN专注于高品质睡眠产品，为您带来自然、舒适的居家睡眠体验。",
+                logoText: "PUMIAN",
+                
+                // 导航与按钮文案
+                navHome: "首页",
+                navConcept: "品牌故事",
+                navProducts: "探索产品",
+                navContact: "联系我们",
+                langSwitchBtn: "EN", // 按钮上显示的文字：点击切换到英文
+                
+                announcementText: "秋季焕新季：全场满 1000 减 100，新人注册即享专属礼遇",
+                
+                carousel: [
+                    { image: "./images/banner1.Png", title: "纯粹之境 自然好眠", subtitle: "高品质天然材质，为您打造舒适睡眠环境" },
+                    { image: "./images/banner2.Png", title: "秋日暖阳 温柔包裹", subtitle: "全新法兰绒系列，感受肌肤与自然的轻柔触碰" },
+                    { image: "./images/banner3.Png", title: "极简生活 睡眠美学", subtitle: "摒弃繁杂，只留最舒适的睡眠体验" }
+                ],
+
+                conceptTitle: "关于朴眠",
+                conceptText: "「朴」意为返璞归真，「眠」旨在舒适休憩。我们相信，最好的睡眠来自于最纯粹的自然馈赠。朴眠坚持精选全球优质天然纤维，结合符合人体工学的现代设计，致力于为您提供治愈身心的睡眠体验。",
+
+                productsSectionTitle: "系列臻品",
+                productsSectionSubtitle: "每一件，都是为了更好的睡眠",
+                productBtn: "咨询全部产品",
+                products: [
+                    { image: "./images/towel1.jpg", name: "新疆长绒棉纯棉毛巾", price: "¥ 69", tag: "热销" },
+                    { image: "./images/towel2.jpg", name: "科技聚酯纤维速干毛巾", price: "¥ 39", tag: "" },
+                    { image: "./images/bedding-set.jpg", name: "100支纯棉水洗四件套", price: "¥ 599", tag: "推荐" },
+                    { image: "./images/bedspread.jpg", name: "精致轻奢绗缝床盖", price: "¥ 299", tag: "新品" }
+                ],
+                
+                // 底部文案
+                footerDesc: "我们致力于提供自然、舒适的睡眠解决方案，让每一晚都成为身心放松的旅程。",
+                footerExplore: "探索",
+                footerService: "服务支持",
+                footerContactTitle: "联系我们",
+                footerPolicy: "售后政策",
+                footerGuide: "洗涤保养指南",
+                footerFaq: "常见问题",
+                contactPhone: "+86 18233438965",
+                contactWechat: "Deason_w",
+                contactEmail: "w53uuu@163.com",
+                workHours: "周一至周日 09:00 - 22:00",
+                copyright: "© 2026 朴眠 PUMIAN. 保留所有权利.",
+                privacy: "隐私政策",
+                terms: "服务条款",
+                labelPhone: "服务热线",
+                labelWechat: "官方微信",
+                labelHours: "工作时间",
+                labelEmail: "联系邮箱"
+            },
+            
+            // ----------------- 英文配置 (ENGLISH) -----------------
+            en: {
+                pageTitle: "PUMIAN | Return to Nature, Sleep Well",
+                metaDescription: "PUMIAN focuses on high-quality sleep products, bringing you a natural and comfortable home sleep experience.",
+                logoText: "PUMIAN",
+                
+                // 导航与按钮文案
+                navHome: "Home",
+                navConcept: "Our Story",
+                navProducts: "Products",
+                navContact: "Contact",
+                langSwitchBtn: "中文", // 按钮上显示的文字：点击切换到中文
+                
+                announcementText: "Autumn Renewal: Save $15 on orders over $150. New members get exclusive gifts.",
+                
+                carousel: [
+                    { image: "./images/banner1.Png", title: "Realm of Purity", subtitle: "Premium natural materials for a comfortable sleep environment" },
+                    { image: "./images/banner2.Png", title: "Autumn Sunshine", subtitle: "New flannel collection, feel the gentle touch of nature" },
+                    { image: "./images/banner3.Png", title: "Minimalist Aesthetics", subtitle: "Discard the complex, keep only the most comfortable sleep" }
+                ],
+
+                conceptTitle: "About PUMIAN",
+                conceptText: "We believe the best sleep comes from the purest gifts of nature. PUMIAN selects high-quality natural fibers globally, combined with modern ergonomic design, to provide you with a healing sleep experience.",
+
+                productsSectionTitle: "Our Collection",
+                productsSectionSubtitle: "Every piece is crafted for better sleep",
+                productBtn: "Inquire All Products",
+                products: [
+                    { image: "./images/towel1.jpg", name: "Xinjiang Pure Cotton Towel", price: "$ 10", tag: "Hot" },
+                    { image: "./images/towel2.jpg", name: "Polyester Quick-dry Towel", price: "$ 6", tag: "" },
+                    { image: "./images/bedding-set.jpg", name: "100s Washed Cotton 4-Piece Set", price: "$ 89", tag: "Recommend" },
+                    { image: "./images/bedspread.jpg", name: "Exquisite Quilted Bedspread", price: "$ 45", tag: "New" }
+                ],
+                
+                // 底部文案
+                footerDesc: "We are committed to providing natural and comfortable sleep solutions, making every night a relaxing journey for your body and mind.",
+                footerExplore: "Explore",
+                footerService: "Support",
+                footerContactTitle: "Contact Us",
+                footerPolicy: "Return Policy",
+                footerGuide: "Care Guide",
+                footerFaq: "FAQ",
+                contactPhone: "+86 18233438965",
+                contactWechat: "Deason_w",
+                contactEmail: "w53uuu@163.com",
+                workHours: "Mon-Sun 09:00 - 22:00",
+                copyright: "© 2026 PUMIAN. All rights reserved.",
+                privacy: "Privacy Policy",
+                terms: "Terms of Service",
+                labelPhone: "Hotline",
+                labelWechat: "WeChat",
+                labelHours: "Hours",
+                labelEmail: "Email"
+            }
+        };
+    </script>
+    <!-- ========================================================================================= -->
+    <!--                                  全局配置区结束                                            -->
+    <!-- ========================================================================================= -->
+
+    <!-- 自定义样式 -->
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #fbfbf9; color: #2c2c2a; }
+        .font-serif { font-family: 'Noto Serif SC', serif; }
+        
+        /* 轮播图动画 */
+        .fade-slide { transition: opacity 1.2s ease-in-out, transform 1.2s ease-in-out; }
+        .slide-hidden { opacity: 0; pointer-events: none; z-index: 0; transform: scale(1.05); }
+        .slide-active { opacity: 1; pointer-events: auto; z-index: 10; transform: scale(1); }
+        
+        /* 文本上升浮现动画 */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up { animation: fadeInUp 0.8s forwards; }
+        
+        /* 平滑滚动 */
+        html { scroll-behavior: smooth; }
+        
+        /* 自定义滚动条 */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #fbfbf9; }
+        ::-webkit-scrollbar-thumb { background: #d6d3d1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #a8a29e; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- ================= 顶部公告栏开始 (Announcement Bar) ================= -->
+    <div class="bg-[#2c2c2a] text-[#fbfbf9] text-xs md:text-sm py-2 px-4 text-center tracking-wider z-50 relative">
+        <span data-config="announcementText"></span>
+    </div>
+    <!-- ================= 顶部公告栏结束 ================= -->
+
+
+    <!-- ================= 导航栏开始 (Navigation) ================= -->
+    <header id="main-header" class="fixed w-full top-auto z-40 transition-all duration-500 bg-transparent text-white border-b border-transparent">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- 导航链接左侧 -->
+                <nav class="hidden md:flex space-x-8 text-sm tracking-widest font-light items-center">
+                    <a href="#" class="hover:opacity-70 transition-opacity" data-config="navHome">首页</a>
+                    <a href="#concept" class="hover:opacity-70 transition-opacity" data-config="navConcept">品牌故事</a>
+                </nav>
+
+                <!-- Logo -->
+                <div class="flex-shrink-0 cursor-pointer">
+                    <a href="#" class="font-serif text-2xl md:text-3xl tracking-[0.2em] font-semibold" data-config="logoText"></a>
+                </div>
+
+                <!-- 导航链接右侧 -->
+                <nav class="hidden md:flex space-x-8 text-sm tracking-widest font-light items-center">
+                    <a href="#products" class="hover:opacity-70 transition-opacity" data-config="navProducts">探索产品</a>
+                    <a href="#footer" class="hover:opacity-70 transition-opacity" data-config="navContact">联系我们</a>
+                    
+                    <!-- 多语言切换按钮 -->
+                    <button id="lang-switch-btn" class="ml-4 px-3 py-1 border border-current rounded-full text-xs hover:bg-white hover:text-stone-900 transition-colors" data-config="langSwitchBtn">EN</button>
+                </nav>
+
+                <!-- 移动端菜单按钮 -->
+                <div class="md:hidden flex items-center space-x-4">
+                    <!-- 移动端多语言切换按钮 -->
+                    <button id="mobile-lang-switch-btn" class="px-2 py-1 border border-current rounded-full text-xs" data-config="langSwitchBtn">EN</button>
+                    <button class="focus:outline-none hover:opacity-70">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ================= 导航栏结束 ================= -->
+
+
+    <!-- ================= 轮播图开始 (Hero Carousel) ================= -->
+    <!-- 轮播图内容将由底部的 JS 脚本根据配置区自动生成注入到这个 div 中 -->
+    <section id="hero-carousel" class="relative w-full h-screen overflow-hidden bg-stone-900">
+        <!-- JS 会在这里填充图片和文字 -->
+    </section>
+    <!-- ================= 轮播图结束 ================= -->
+
+
+    <!-- ================= 品牌理念区开始 (Brand Concept) ================= -->
+    <section id="concept" class="py-24 md:py-36 bg-[#fbfbf9]">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="font-serif text-3xl md:text-4xl mb-8 text-stone-800 tracking-widest" data-config="conceptTitle"></h2>
+            <div class="w-12 h-[1px] bg-stone-400 mx-auto mb-10"></div>
+            <p class="text-stone-500 text-sm md:text-base leading-loose md:leading-loose font-light tracking-wide" data-config="conceptText"></p>
+        </div>
+    </section>
+    <!-- ================= 品牌理念区结束 ================= -->
+
+
+    <!-- ================= 产品区开始 (Products) ================= -->
+    <section id="products" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl text-stone-800 tracking-widest mb-4" data-config="productsSectionTitle"></h2>
+                <p class="text-stone-500 text-sm tracking-wider font-light" data-config="productsSectionSubtitle"></p>
+            </div>
+            
+            <!-- 产品列表容器，JS 会根据配置自动生成产品卡片并注入此处 -->
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16">
+                <!-- 产品卡片由JS生成 -->
+            </div>
+            
+            <div class="text-center mt-20">
+                <a href="#footer" class="inline-block border border-stone-800 text-stone-800 px-10 py-3 text-sm tracking-widest hover:bg-stone-800 hover:text-white transition-colors duration-300" data-config="productBtn">
+                    咨询全部产品
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- ================= 产品区结束 ================= -->
+
+
+    <!-- ================= 底部区域开始 (Footer) ================= -->
+    <footer id="footer" class="bg-[#212120] text-stone-300 pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                
+                <!-- 品牌信息 -->
+                <div class="col-span-1 md:col-span-1">
+                    <h3 class="font-serif text-2xl tracking-[0.2em] text-white mb-6" data-config="logoText"></h3>
+                    <p class="text-xs text-stone-500 leading-relaxed font-light mb-6" data-config="footerDesc"></p>
+                </div>
+
+                <!-- 快速链接 -->
+                <div>
+                    <h4 class="text-sm font-medium tracking-widest text-white mb-6" data-config="footerExplore">探索</h4>
+                    <ul class="space-y-4 text-xs font-light">
+                        <li><a href="#" class="hover:text-white transition-colors" data-config="navHome"></a></li>
+                        <li><a href="#concept" class="hover:text-white transition-colors" data-config="navConcept"></a></li>
+                        <li><a href="#products" class="hover:text-white transition-colors" data-config="navProducts"></a></li>
+                    </ul>
+                </div>
+
+                <!-- 客户服务 -->
+                <div>
+                    <h4 class="text-sm font-medium tracking-widest text-white mb-6" data-config="footerService">服务支持</h4>
+                    <ul class="space-y-4 text-xs font-light">
+                        <li data-config="footerPolicy"></li>
+                        <li data-config="footerGuide"></li>
+                        <li data-config="footerFaq"></li>
+                    </ul>
+                </div>
+
+                <!-- 联系方式 -->
+                <div>
+                    <h4 class="text-sm font-medium tracking-widest text-white mb-6" data-config="footerContactTitle">联系我们</h4>
+                    <ul class="space-y-4 text-xs font-light">
+                        <li class="flex items-start">
+                            <span class="w-16 flex-shrink-0 text-stone-500" data-config="labelPhone"></span>
+                            <span data-config="contactPhone"></span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-16 flex-shrink-0 text-stone-500" data-config="labelWechat"></span>
+                            <span data-config="contactWechat"></span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-16 flex-shrink-0 text-stone-500" data-config="labelHours"></span>
+                            <span data-config="workHours"></span>
+                        </li>
+                        <li class="flex items-start mt-4">
+                            <span class="w-16 flex-shrink-0 text-stone-500" data-config="labelEmail"></span>
+                            <span data-config="contactEmail"></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-stone-800 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-stone-600 tracking-wider">
+                <p data-config="copyright"></p>
+                <div class="mt-4 md:mt-0 space-x-4">
+                    <span data-config="privacy">隐私政策</span>
+                    <span data-config="terms">服务条款</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ================= 底部区域结束 ================= -->
+
+
+    <!-- ========================================================================================= -->
+    <!--                核心逻辑控制脚本 (无需修改，自动读取顶部的配置区)                            -->
+    <!-- ========================================================================================= -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 当前语言状态管理 (默认中文，优先读取本地存储)
+            let currentLang = localStorage.getItem('pumian_lang') || 'zh';
+            let carouselInterval = null;
+
+            function renderPage(lang) {
+                const config = window.PUMIAN_CONFIG[lang];
+
+                // 1. 初始化 SEO 和网页标题
+                document.title = config.pageTitle;
+                document.querySelector('meta[name="description"]').setAttribute("content", config.metaDescription);
+
+                // 2. 将配置文本绑定到对应的 HTML 元素
+                const dataElements = document.querySelectorAll('[data-config]');
+                dataElements.forEach(el => {
+                    const key = el.getAttribute('data-config');
+                    if (config[key]) {
+                        el.textContent = config[key];
+                    }
+                });
+
+                // 3. 渲染轮播图
+                const carouselContainer = document.getElementById('hero-carousel');
+                if (config.carousel && config.carousel.length > 0) {
+                    let slidesHtml = '';
+                    config.carousel.forEach((slide, index) => {
+                        const isActive = index === 0 ? 'slide-active' : 'slide-hidden';
+                        slidesHtml += `
+                            <div class="absolute inset-0 w-full h-full fade-slide ${isActive}" data-slide-index="${index}">
+                                <!-- 背景图片叠加黑色半透明遮罩以凸显文字 -->
+                                <div class="absolute inset-0 bg-black/30 z-10"></div>
+                                <img src="${slide.image}" class="absolute inset-0 w-full h-full object-cover z-0" alt="${slide.title}">
+                                
+                                <!-- 文字内容 -->
+                                <div class="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4">
+                                    <h1 class="text-white text-4xl md:text-6xl font-serif mb-6 tracking-[0.15em] opacity-0 animate-fade-in-up" style="animation-delay: 0.2s;">
+                                        ${slide.title}
+                                    </h1>
+                                    <p class="text-[#fbfbf9] text-lg md:text-xl font-light tracking-widest opacity-0 animate-fade-in-up" style="animation-delay: 0.5s;">
+                                        ${slide.subtitle}
+                                    </p>
+                                </div>
+                            </div>
+                        `;
+                    });
+                    carouselContainer.innerHTML = slidesHtml;
+
+                    // 重置并启动轮播逻辑
+                    if (carouselInterval) clearInterval(carouselInterval);
+                    let currentSlide = 0;
+                    const slides = document.querySelectorAll('.fade-slide');
+                    if(slides.length > 1) {
+                        carouselInterval = setInterval(() => {
+                            slides[currentSlide].classList.remove('slide-active');
+                            slides[currentSlide].classList.add('slide-hidden');
+                            
+                            currentSlide = (currentSlide + 1) % slides.length;
+                            
+                            // 重置动画
+                            const nextSlide = slides[currentSlide];
+                            const texts = nextSlide.querySelectorAll('.animate-fade-in-up');
+                            texts.forEach(text => {
+                                text.style.animation = 'none';
+                                text.offsetHeight; // trigger reflow
+                                text.style.animation = null;
+                            });
+                            
+                            nextSlide.classList.remove('slide-hidden');
+                            nextSlide.classList.add('slide-active');
+                        }, 5000); // 5秒切换一次
+                    }
+                }
+
+                // 4. 渲染产品区
+                const productGrid = document.getElementById('product-grid');
+                if (config.products && config.products.length > 0) {
+                    let productsHtml = '';
+                    config.products.forEach(product => {
+                        const tagHtml = product.tag ? `<div class="absolute top-0 left-0 bg-[#2c2c2a] text-white text-[10px] px-3 py-1 tracking-wider z-10">${product.tag}</div>` : '';
+                        productsHtml += `
+                            <div class="group cursor-pointer">
+                                <div class="relative w-full aspect-[4/5] bg-stone-100 overflow-hidden mb-6">
+                                    ${tagHtml}
+                                    <img src="${product.image}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="${product.name}">
+                                </div>
+                                <div class="text-center">
+                                    <h3 class="text-stone-800 text-sm font-medium tracking-wide mb-2 group-hover:text-stone-500 transition-colors">${product.name}</h3>
+                                    <p class="text-stone-500 text-sm font-serif">${product.price}</p>
+                                </div>
+                            </div>
+                        `;
+                    });
+                    productGrid.innerHTML = productsHtml;
+                }
+            }
+
+            // 初始化首次渲染
+            renderPage(currentLang);
+
+            // 绑定切换语言事件
+            const switchLang = () => {
+                currentLang = currentLang === 'zh' ? 'en' : 'zh';
+                localStorage.setItem('pumian_lang', currentLang);
+                renderPage(currentLang);
+            };
+
+            document.getElementById('lang-switch-btn').addEventListener('click', switchLang);
+            document.getElementById('mobile-lang-switch-btn').addEventListener('click', switchLang);
+
+            // 5. 导航栏滚动交互特效
+            const header = document.getElementById('main-header');
+            window.addEventListener('scroll', () => {
+                // 如果向下滚动超过 50px，改变导航栏颜色
+                if (window.scrollY > 50) {
+                    header.classList.remove('bg-transparent', 'text-white', 'border-transparent', 'py-4');
+                    header.classList.add('bg-white/95', 'backdrop-blur-md', 'text-stone-800', 'border-stone-200', 'shadow-sm');
+                    // 确保滚下去后SVG图标颜色一致
+                    header.querySelectorAll('nav a').forEach(a => a.classList.add('hover:text-stone-500'));
+                } else {
+                    header.classList.add('bg-transparent', 'text-white', 'border-transparent', 'py-4');
+                    header.classList.remove('bg-white/95', 'backdrop-blur-md', 'text-stone-800', 'border-stone-200', 'shadow-sm');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
